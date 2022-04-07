@@ -1,4 +1,4 @@
-import EChartsReact from "echarts-for-react"
+import {EchartsComponent} from "echarts-react-wrapper"
 import { useMemo } from "react"
 const histogramBarCount = 40
 
@@ -200,5 +200,5 @@ export default function PairPlot({series, timeseriesAxis, clusters, dataClusterI
       }
     }
   }), [onBrushActivate, onBrushDeactivate, onSelected])
-  return <EChartsReact style={style} option={option} onEvents={eventsHandler} />
+  return <EchartsComponent style={style} option={option} eventsHandler={eventsHandler} />
 }
